@@ -1,3 +1,22 @@
+# REAL WORLD
+
+# Algorithm -- set of instructions
+
+# sort --> famous algorithm
+
+# backend engineer
+
+# when we talk about algorithms -- career programming -- interviews
+
+# whiteboarding - you and an engineer will talk about how to solve and build the algorithm
+# they're looking for .... 
+
+# - did you find a solution? 
+# - did you make the algo efficient? 
+# - did you iterate? 
+# - do you have a process?
+
+
 """### **ALGORITHMS CHALLENGE:** The Bill Calculator
 
 Let's imagine you're going out to eat at your favorite pizza joint; you ordered a slice-of-pizza and now you want to calculate the bill... using Python.
@@ -13,6 +32,7 @@ Let's imagine you're going out to eat at your favorite pizza joint; you ordered 
 #### **Key Assumptions & Constraints.**
 
 ##### **Assumptions** are identified to _simplify the problem and reduce complexity/scope_.
+# ALWAYS ask about your assumptions.
 
 ##### **Constraints** are identified to _highlight aspects of the problem that are unavoidable or cannot be simplified_.
 
@@ -63,22 +83,22 @@ function that calculates bill (food price, amount in tips)
 #### **Coding Implementation.**
 """
 
-def calculate_bill(food_price, amount_in_tips):
-  tax_rate = 0.0875
-  amount_in_taxes = tax_rate * food_price
-  total_bill = food_price + amount_in_tips + amount_in_taxes
-  return total_bill
+# def calculate_bill(food_price, amount_in_tips):
+#   tax_rate = 0.0875
+#   amount_in_taxes = tax_rate * food_price
+#   total_bill = food_price + amount_in_tips + amount_in_taxes
+#   return total_bill
 
-"""#### **Testing.**"""
+# """#### **Testing.**"""
 
-# Should return `27.826625`.
-calculate_bill(food_price=20.99, amount_in_tips=5)
+# # Should return `27.826625`.
+# calculate_bill(food_price=20.99, amount_in_tips=5)
 
-# Should return `10`.
-calculate_bill(food_price=0, amount_in_tips=10)
+# # Should return `10`.
+# calculate_bill(food_price=0, amount_in_tips=10)
 
-# Should return `108.75`.
-calculate_bill(food_price=100, amount_in_tips=0)
+# # Should return `108.75`.
+# calculate_bill(food_price=100, amount_in_tips=0)
 
 """#### **Optimization. (Stretch Challenges.)**
 
@@ -95,3 +115,43 @@ calculate_bill(food_price=100, amount_in_tips=0)
 
 5. Extend the function with a new argument called `is_party_large`. Analyze whether or not the party size is considered large (if `is_party_large` is true/false); if the party is considered large in size, then add an automatic 20% gratuity to the final bill. (The gratuity is considered pre-tax and pre-tips.)
 """
+
+# PSEUDO CODE -- it is meant to give an idea of that you will build
+
+# def calculate_bill():
+#   food = get user input for the food
+#   tip_amount = get user input for the tip
+#   taxation_rate = ten percent
+#   taxed_food = food * taxation_rate
+#   final_total = food + taxed_food + tip_amount
+#   return final_total
+
+def calculate_bill():
+
+  food_amount = float( 
+    input("What was the cost of the food? ")
+  )
+
+  print( f"A recommended tip is: {food_amount * 0.2}" )
+
+  tip_amount = float(
+    input("How much was the tip? ")
+  )
+
+  taxation_rate = 0.10
+
+  taxes = food_amount * taxation_rate
+
+  final_total = food_amount + taxes + tip_amount
+  print( final_total )
+  return final_total
+
+
+calculate_bill()
+
+# Traceback (most recent call last):
+#   File "day-01/exercise.py", line 137, in <module>
+#     calculate_bill()
+#   File "day-01/exercise.py", line 133, in calculate_bill
+#     taxes = food_amount * taxation_rate
+# TypeError: can't multiply sequence by non-int of type 'float'

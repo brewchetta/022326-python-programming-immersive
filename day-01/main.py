@@ -225,23 +225,34 @@ def login(username, password):
     else:
         # block of code where stuff happens when the `if` is False
         return "invalid username or password"
+    
+# if (True):
+#     do stuff
+
+# you don't need an else all the time
+
+food = "hamburger"
+
+# check the first thing
+if (food == "vegetable"):
+    print("what a healthy meal")
+# if the first thing isn't true, check the second thing
+elif (food == "candy"):
+    print("yum it's candy")
+# if the second thing isn't true, check the third thing
+elif (food == "hamburger"):
+    print("tasty hamburger")
+# finally do the else if nothing else triggered
+else:
+    print("I don't want it")
 
 
+# TRUTHINESS
+# every value if it needs to be evaluated as "True" or "False" when it comes to an if statement has a "truthiness" to it
+
+bool(1) # True
+bool(0) # False
+# 0 == 0% True, 1 == 100% True
 
 
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
-# RETURN AT 3:46 EST
+# CONDITIONAL OPERATORS
