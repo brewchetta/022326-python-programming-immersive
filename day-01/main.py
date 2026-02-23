@@ -113,10 +113,58 @@ print(result_6)
 result_7 = 13 % 3 == 0
 print(result_7)
 
+# defining a function
+# `number` is a an argument / paremeter
 def is_divisible_by_three(number):
     result = number % 3 == 0
     print(result)
 
+# calling the function
 is_divisible_by_three(12)
 is_divisible_by_three(55)
 is_divisible_by_three(5678)
+
+# function without an argument
+def say_hello():
+    print("Hello world!")
+
+# getting data from a function
+def is_divisible_by_four(number):
+    result = number % 4 == 0
+    return result
+# return gives data out of the function and completes the function
+
+result = say_hello()
+# result is nothing
+
+result = is_divisible_by_four(4)
+# result is True
+
+def add(num1, num2):
+    return num1 + num2
+
+add(1,2) # return 3
+
+def full_name(first_name, last_name):
+    return f"{first_name} {last_name}"
+
+full_name("Bob", "Dylan") # "Bob Dylan"
+
+# default argument
+# "nothing" is the fallback value
+def eat_breakfast( breakfast_item="nothing" ):
+    breakfast_string = f"Yum yum eating {breakfast_item}. It's my favorite!"
+    return breakfast_string
+
+# return will give back data we use later somewhere else
+result = eat_breakfast()
+
+print(result)
+
+def multiple_returns():
+    return "thing 1"
+    return "thing 2"
+    return "thing 3"
+    return "thing 4"
+# only the first return triggers
+# everything after a return is triggered is DEAD CODE
