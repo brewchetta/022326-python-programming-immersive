@@ -167,4 +167,32 @@ def multiple_returns():
     return "thing 3"
     return "thing 4"
 # only the first return triggers
-# everything after a return is triggered is DEAD CODE
+# everything after a return is triggered in a function is DEAD CODE
+
+
+# MINI EXERCISES ------------- RETURN AT 2:25 EST
+
+# 1 - FULL_NAME #########
+
+# Build a function `full_name()` which accepts two arguments, `first_name` and `last_name`.
+# This function capitalizes the first letter of each and then formats them so they're together.
+# The function returns the new string. Save the new string to a variable and `print` it to confirm it works.
+
+# Examples:
+# full_name("bob", "marley") --> "Bob Marley"
+# full_name("elton", "john") --> "Elton John"
+
+
+# 2 - MAKE_SANDWICH ######
+
+# Build a function `make_sandwich()` which accepts arguments for `protein`, `cheese`, `sauce`, and `other`.
+# This function returns a string formatted like this: "I made a sandwich with {protein} with {cheese} cheese, {sauce}, and {other}".
+# If no cheese is given, default to `american`.
+# If no sauce is given default to `mayo`.
+# If no `other` is given, default to `nothing else`.
+
+# Examples:
+# make_sandwich("ham", "swiss", "ketchup", "lettuce")
+# --> "I made a sandwich with ham with swiss cheese, ketchup, and lettuce"
+# make_sandwich("bacon")
+# --> "I made a sandwich with ham with american cheese, mayo, and nothing else"
