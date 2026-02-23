@@ -118,3 +118,5 @@ def is_divisible_by_three(number):
     print(result)
 
 is_divisible_by_three(12)
+is_divisible_by_three(55)
+is_divisible_by_three(5678)
