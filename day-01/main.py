@@ -170,7 +170,7 @@ def multiple_returns():
 # everything after a return is triggered in a function is DEAD CODE
 
 
-# MINI EXERCISES ------------- RETURN AT 2:25 EST
+# MINI EXERCISES -------------
 
 # 1 - FULL_NAME #########
 
@@ -181,6 +181,14 @@ def multiple_returns():
 # Examples:
 # full_name("bob", "marley") --> "Bob Marley"
 # full_name("elton", "john") --> "Elton John"
+
+def full_name(first_name, last_name):
+    return f"{ first_name.capitalize() } { last_name.capitalize() }"
+
+# the .capitalize is a special function called a method
+
+result = full_name("bob", "marley")
+print(result)
 
 
 # 2 - MAKE_SANDWICH ######
@@ -196,3 +204,44 @@ def multiple_returns():
 # --> "I made a sandwich with ham with swiss cheese, ketchup, and lettuce"
 # make_sandwich("bacon")
 # --> "I made a sandwich with ham with american cheese, mayo, and nothing else"
+
+#                 protein is required
+def make_sandwich(protein, cheese="american", sauce="mayo", other="nothing else"):
+    return f"I made a sandwich with {protein} with {cheese} cheese, {sauce}, and {other}"
+
+result = make_sandwich("turkey")
+
+print( result )
+
+# keyword arguments
+# make_sandwich(cheese="swiss", protein="tofu", sauce="thousand island dressing", other="jalapenos")
+
+
+def login(username, password):
+#         condition           and means both must match!
+    if (username == "chett" and password == "password123"):
+        # block of code where stuff happens when the `if` is True
+        return "user authenticated"
+    else:
+        # block of code where stuff happens when the `if` is False
+        return "invalid username or password"
+
+
+
+
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
+# RETURN AT 3:46 EST
