@@ -255,4 +255,12 @@ bool(0) # False
 # 0 == 0% True, 1 == 100% True
 
 
-# CONDITIONAL OPERATORS
+# COMPARISON OPERATORS
+
+# We can compare different data types using comparison operators, for example comparing numbers
+
+1 == 2 # False
+1 < 2 # True
+1 > 2 # False
+2 <= 2 # False
+1 != 2 # True because 1 NOT EQUAL 2

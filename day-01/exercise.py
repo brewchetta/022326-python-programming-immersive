@@ -148,10 +148,3 @@ def calculate_bill():
 
 
 calculate_bill()
-
-# Traceback (most recent call last):
-#   File "day-01/exercise.py", line 137, in <module>
-#     calculate_bill()
-#   File "day-01/exercise.py", line 133, in calculate_bill
-#     taxes = food_amount * taxation_rate
-# TypeError: can't multiply sequence by non-int of type 'float'
