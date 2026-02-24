@@ -31,30 +31,73 @@ def france_two():
     print(we_all_do_this)    
 
 
+# LISTS - (ARRAY)
+
+# data structure - a data type that holds other data types
+
+
+fruits_list = ["apple", "banana", "starfruit", "dragonfruit", "kiwi"]
+
+# how to get the length of the list
+len( fruits_list )
+
+# USING INDEXES
+fruits_list[0] # "apple"
+fruits_list[2] # "starfruit"
+
+# we can also count from the back
+fruits_list[-1]
+
+fruits_list.append("grape")
+fruits_list.append("durian")
+
+# remove the last item
+fruits_list.pop()
+
+# removing a specific item
+fruits_list.remove("banana")
+
+# two ways of removing based on an index
+fruits_list.pop(1)
+del fruits_list[1]
+
+# changing data
+fruits_list[0] = "banana"
+
+# slicing data
 
 
 
 
+# MINI EXERCISES
 
+cheeses_list = ["havarti", "swiss", "goat", "muenster"]
 
+# 1. For the list, add "american" to the end of the list twice.
 
+# 2. Change "goat" to "pepperjack". 
 
+# 3. Remove the extra "american" from the end of the list.
 
+# 4. Remove "havarti".
 
+# 5. Print the first half of the list (and only the first half!)
 
+# RETURN AT 12:50 EST
+# RETURN AT 12:50 EST
+# RETURN AT 12:50 EST
+# RETURN AT 12:50 EST
+# RETURN AT 12:50 EST
+# RETURN AT 12:50 EST
+# RETURN AT 12:50 EST
+# RETURN AT 12:50 EST
+# RETURN AT 12:50 EST
+# RETURN AT 12:50 EST
+# RETURN AT 12:50 EST
+# RETURN AT 12:50 EST
+# RETURN AT 12:50 EST
+# RETURN AT 12:50 EST
 
-
-
-
-
-
-
-
-
-
-
-
-# LISTS
 
 
 
