@@ -71,58 +71,145 @@ fruits_list[0] = "banana"
 
 # MINI EXERCISES
 
-cheeses_list = ["havarti", "swiss", "goat", "muenster"]
+cheese_list = ["havarti", "swiss", "goat", "muenster"]
 
 # 1. For the list, add "american" to the end of the list twice.
 
-cheeses_list.append("american")
-cheeses_list.append("american")
+cheese_list.append("american")
+cheese_list.append("american")
 
 # 2. Change "goat" to "pepperjack". 
 
-cheeses_list[2] = "pepperjack"
+cheese_list[2] = "pepperjack"
 
 # OR
 
-# cheeses_list.remove("goat")
-# cheeses_list.append("pepperjack")
+# cheese_list.remove("goat")
+# cheese_list.append("pepperjack")
 
 # 3. Remove the extra "american" from the end of the list.
 
-cheeses_list.pop()
+cheese_list.pop()
 # OR
-# cheeses_list.remove("american")
+# cheese_list.remove("american")
 # OR
-# del cheeses_list[5]
+# del cheese_list[5]
 
 # 4. Remove "havarti".
 
-cheeses_list.remove("havarti")
+cheese_list.remove("havarti")
 # OR
-# cheeses_list.pop(0)
+# cheese_list.pop(0)
 
 # 5. Print the first half of the list (and only the first half!)
 
-cheeses_list[0:2]
+cheese_list[0:2]
 
+# extends will add a second array to the first
+cheese_list.extend( ["cheddar", "halloumi", "havarti"] )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# ["Swiss"
+# "Pepperjack"
+# "Muenster"
+# "American"
+# "Cheddar"
+# "Halloumi"
+# "Havarti"]
 
 # LOOPS
+
+def print_capitalized_cheese():
+    index = 0
+
+    while index < len(cheese_list):
+        cheese = cheese_list[index]
+        print( cheese.capitalize() )
+        index += 1
+
+def print_out_cheese_we_like():
+    for cheese in cheese_list:
+        print(f"I like {cheese}")
+
+# iterables
+
+
+# TUPLES
+
+# a tuple cannot be changed after it's made
+cheese_tuple = ("cheddar", "swiss", "havarti")
+
+# this won't work!
+# cheese_tuple.append("halloumi")
+# cheese_tuple.pop()
+# cheese_tuple[0] = "muenster"
+
+
+# SET
+
+# a set does not allow duplicates! this can be really helpful for getting rid of duplicate data
+
+cheese_list.append("cheddar")
+cheese_list.append("cheddar")
+cheese_list.append("cheddar")
+cheese_list.append("cheddar")
+cheese_list.append("cheddar")
+
+unique_cheeses = set( cheese_list )
+# {'halloumi', 'pepperjack', 'muenster', 'american', 'monster', 'havarti', 'cheddar', 'swiss'}
+
+
+# RANGE
+
+range(12, 20)
+# numbers 12 through 19
+
+range(12)
+# numbers 0 through 11
+
+def add_cheddar_to_list():
+    cheese_list.append("cheddar")
+
+for _ in range(10000):
+    add_cheddar_to_list()
+
+for _ in range(10000):
+    cheese_list.pop()
+
+
+# MINI EXERCISES
+
+# Create a new list:
+
+car_brands = ["toyota", "chevrolet", "ford", "ford", "ford", "mitsubishi", "honda", "BMW"]
+
+# 1. Transform the list into a `set` so that it removes the duplicates and then transform the `set` back into a `list`. Check that the `list` has no duplicates.
+
+# 2. Create a function `print_brands()` which will loop through the list and print each brand.
+
+# 3. Create a function `add_brand_to_list_num_times()` which accepts two arguments, `brand` and `num`. This will add the brand to `car_brands` a number of times equal to `num`.
+
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+# RETURN AT 4:15 EST
+
+
+
+
+
+
 
 
 
