@@ -184,35 +184,65 @@ car_brands = ["toyota", "chevrolet", "ford", "ford", "ford", "mitsubishi", "hond
 
 # 1. Transform the list into a `set` so that it removes the duplicates and then transform the `set` back into a `list`. Check that the `list` has no duplicates.
 
+car_brands_set = set( car_brands )
+unique_car_brands = list( car_brands_set )
+
 # 2. Create a function `print_brands()` which will loop through the list and print each brand.
+
+def print_brands():
+    for brand in car_brands:
+        print(brand)
 
 # 3. Create a function `add_brand_to_list_num_times()` which accepts two arguments, `brand` and `num`. This will add the brand to `car_brands` a number of times equal to `num`.
 
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
-# RETURN AT 4:15 EST
 
-
-
-
-
-
-
+def add_brand_to_list_num_times(brand, num):
+    for x in range(num):
+        car_brands.append(brand)
 
 
 # DICTIONARIES
 
+# key / value pairs that determine certain attributes tied to that dictionary
+person = {
+    "name": "Chett",
+    "age": 21,
+    "hobbies": [ "thinking about python", "looking at python", "coding python", "drinking" ]
+}
 
+# name, age, hobbies would all be keys
+# "Chett", 21, [list of hobbies...] would all be values
+
+# accessing information
+person["name"]
+
+# accessing nested information
+person["hobbies"][0]
+
+# we can change attributes
+person["age"] = 22
+
+# add a new key/value pair
+person["occupation"] = "python obsessed instructor"
+
+# heavily nested dictionaries
+world = {
+    "people": {
+        "chett":{
+            "name": "Chett",
+            "age": 21,
+            "hobbies": [ "thinking about python", "looking at python", "coding python", "drinking" ]
+        }
+    }
+}
+
+# accessing deeply nested data
+world["people"]["chett"]["age"]
+
+# list of dictionaries
+people_list = [
+    { "name": "Chett", "age": 21 },
+    { "name": "Steve", "age": 32 },
+    { "name": "Steph", "age": 45 },
+    { "name": "Joe", "age": 62 },
+]
