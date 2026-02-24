@@ -75,28 +75,49 @@ cheeses_list = ["havarti", "swiss", "goat", "muenster"]
 
 # 1. For the list, add "american" to the end of the list twice.
 
+cheeses_list.append("american")
+cheeses_list.append("american")
+
 # 2. Change "goat" to "pepperjack". 
+
+cheeses_list[2] = "pepperjack"
+
+# OR
+
+# cheeses_list.remove("goat")
+# cheeses_list.append("pepperjack")
 
 # 3. Remove the extra "american" from the end of the list.
 
+cheeses_list.pop()
+# OR
+# cheeses_list.remove("american")
+# OR
+# del cheeses_list[5]
+
 # 4. Remove "havarti".
+
+cheeses_list.remove("havarti")
+# OR
+# cheeses_list.pop(0)
 
 # 5. Print the first half of the list (and only the first half!)
 
-# RETURN AT 12:50 EST
-# RETURN AT 12:50 EST
-# RETURN AT 12:50 EST
-# RETURN AT 12:50 EST
-# RETURN AT 12:50 EST
-# RETURN AT 12:50 EST
-# RETURN AT 12:50 EST
-# RETURN AT 12:50 EST
-# RETURN AT 12:50 EST
-# RETURN AT 12:50 EST
-# RETURN AT 12:50 EST
-# RETURN AT 12:50 EST
-# RETURN AT 12:50 EST
-# RETURN AT 12:50 EST
+cheeses_list[0:2]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
