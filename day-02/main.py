@@ -1,0 +1,15 @@
+# SCOPE
+
+
+
+# LISTS
+
+
+
+# LOOPS
+
+
+
+# DICTIONARIES
+
+
