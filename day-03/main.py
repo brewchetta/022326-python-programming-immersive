@@ -144,7 +144,6 @@ house_1 = House(40000, 6, 1)
 house_2 = House(100, 0, 1)
 
 
-
 # RANDOM & MODULES
 
 # get extra code from a MODULE
@@ -160,10 +159,7 @@ for _ in range(10):
     # build a house
     House(square_footage, num_bedrooms, num_bathrooms)
 
-
-
-
-
+# using random.choice to get a random pizza topping
 pizza_toppings = ["cheese", "pepperoni", "pineapple", "mushroom", "ham"]
 choice_1 = random.choice( pizza_toppings )
 choice_2 = random.choice( pizza_toppings )
