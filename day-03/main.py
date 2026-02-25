@@ -101,35 +101,69 @@ class Car:
         gas_calculation = self.gallons_in_tank - 10
         self.gallons_in_tank = max(0, gas_calculation)
 
-Car(make="Toyota", model="Corolla")
+corolla = Car(make="Toyota", model="Corolla")
 
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
-# RETURN AT 2:10 EST
+
+
+
+# CLASS METHODS AND CLASS ATTRIBUTES
+
+class House:
+
+    # class attribute
+    structure_type = "Residential"
+    
+    # this will eventually be a list of every house we've initialized with __init__
+    all_houses = [] # House.all_houses
+
+    current_id = 1
+
+    def __init__(self, square_footage, num_bedrooms, num_baths):
+        # each house gets a unique id
+        self.id = House.current_id
+        House.current_id += 1
+        # other attributes
+        self.square_footage = square_footage
+        self.num_bedrooms = num_bedrooms
+        self.num_baths = num_baths
+        # the new house gets added to House.all_houses
+        House.all_houses.append(self)
+
+    def __repr__(self):
+        return f"House(square_footage={self.square_footage}, num_bedrooms={self.num_bedrooms}, num_baths={self.num_baths})"
+    
+    # decorator... it alters / changes how the function coming after it works
+    # the @classmethod means it's callable by House and not an individual like house_1
+    @classmethod
+    def demolish_all_houses(cls):
+        # cls is House
+        cls.all_houses = []
+
+
+house_1 = House(40000, 6, 1)
+house_2 = House(100, 0, 1)
+
+
+
+# RANDOM & MODULES
+
+# get extra code from a MODULE
+import random
+
+# run this loop 10 times
+for _ in range(10):
+    # get random values --> randint stands for random integer
+    # randint gets a number between the first and second number
+    square_footage = random.randint(1000, 20000)
+    num_bedrooms = random.randint(1, 6)
+    num_bathrooms = random.randint(1, 12)
+    # build a house
+    House(square_footage, num_bedrooms, num_bathrooms)
+
+
+
+
+
+pizza_toppings = ["cheese", "pepperoni", "pineapple", "mushroom", "ham"]
+choice_1 = random.choice( pizza_toppings )
+choice_2 = random.choice( pizza_toppings )
