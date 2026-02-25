@@ -57,9 +57,8 @@ t_1000 = Robot(name="T-1000", description="Arnold Schwarzeneger")
 
 # MINI-EXERCISE
 
-# Build a class for `Car`. This class begins with attributes `make` & `model`. I would also like you to give your car an attribute `gallons_in_tank` which starts at 0.
+# Build a class for `Car`. This class begins with attributes `make` & `model`. Also give your car an attribute `gallons_in_tank` which starts at 0 when the car is initialized.
 
-# Car(make="Toyota", model="Corolla")
 
 # Please build an `__init__` method for the car which accepts a `make` and `model`.
 
@@ -73,15 +72,64 @@ t_1000 = Robot(name="T-1000", description="Arnold Schwarzeneger")
 # Build a `drive` method which reduces the `gallons_in_tank` by 10.
 # BONUS: The `gallons_in_tank` shouldn't go below 0.
 
-# RETURN AT 12:45 EST
-# RETURN AT 12:45 EST
-# RETURN AT 12:45 EST
-# RETURN AT 12:45 EST
-# RETURN AT 12:45 EST
-# RETURN AT 12:45 EST
-# RETURN AT 12:45 EST
-# RETURN AT 12:45 EST
-# RETURN AT 12:45 EST
-# RETURN AT 12:45 EST
-# RETURN AT 12:45 EST
-# RETURN AT 12:45 EST
+class Car:
+
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+        self.gallons_in_tank = 0
+
+    def __repr__(self):
+        return f"Car(make={self.make}, model={self.model}, gallons_in_tank={self.gallons_in_tank})"
+    
+    def full_description(self):
+        return f"{self.make} {self.model} with {self.gallons_in_tank} in the tank"
+    
+    def fill_tank(self):
+        self.gallons_in_tank = 20
+
+    # def drive(self):
+    #     while self.gallons_in_tank != 0:
+    #         self.gallons_in_tank -= 10
+
+    # def drive(self):
+    #     self.gallons_in_tank -= 10
+    #     if self.gallons_in_tank < 0:
+    #         self.gallons_in_tank = 0
+
+    def drive(self):
+        gas_calculation = self.gallons_in_tank - 10
+        self.gallons_in_tank = max(0, gas_calculation)
+
+Car(make="Toyota", model="Corolla")
+
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
+# RETURN AT 2:10 EST
