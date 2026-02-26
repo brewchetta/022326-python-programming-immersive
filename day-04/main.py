@@ -91,30 +91,73 @@ https://www.fruityvice.com/api/fruit/
 
 """
 
-# inside current directory/folder . find the apple.py apple and take the apple_art from there
-from .apple import apple_art
+# find the apple.py apple and take the apple_art from there
+from apple import apple_art
 
 # this is the program itself
 class Application:
 
+    # CLASS VARIABLES #
     base_url = "https://www.fruityvice.com/api/fruit/"
     running = True
     user_name = "anonymous"
 
+
+    # RUN LOOP #
     # each method will be a specific functionality within the app
     def run(self):
+        # first show the intro screen
+        self.intro_screen()
+        # then enter loop for running the app
         while self.running:
-            ?????????????
+            self.main_menu()
         
+
+    # INTRO SCREEN #
     def intro_screen(self):
         for line in apple_art:
             print(line)
         self.get_name()
+        print(f"Welcome {self.user_name}!")
     
     def get_name(self):
         self.user_name = input("What is your name >>> ")
 
 
+    # MAIN MENU #
+    def main_menu(self):
+        print("Make a choice:")
+        print("1. Lookup a fruit")
+        print("5. Exit")
+        choice = input(">>> ")
+        if choice == "1":
+            self.fruit_lookup()
+        elif choice == "5":
+            self.running = False
+
+    
+    # LOOKUP #
+    def fruit_lookup(self):
+        print("What fruit would you like to lookup?")
+        fruit = input(">>> ")
+        # go request the fruit from the API
+        self.get_fruit(fruit)
+
+    def get_fruit(self, fruit):
+        response = requests.get(self.base_url + fruit)
+        fruit_data = response.json()
+        self.pretty_print_fruit(fruit_data)
+    
+    def pretty_print_fruit(self, fruit_data):
+        print(fruit_data["name"])
+        print(fruit_data["family"])
+        print(fruit_data["order"])
+        print(fruit_data["genus"])
+
+
+
+
+
 # start running the application instance!
-app = Application()
+app = Application() # we make a new instance of the app
 app.run()
