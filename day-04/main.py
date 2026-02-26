@@ -1,0 +1,34 @@
+# LIST COMPREHENSIONS
+
+
+
+
+
+
+
+
+
+
+# LAMBDA FUNCTIONS
+
+
+
+
+
+
+
+
+
+
+
+# PIP & REQUESTS
+
+
+
+
+
+
+
+
+
+# EXAMPLE COMMAND LINE INTERFACE APP
