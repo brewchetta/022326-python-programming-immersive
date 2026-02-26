@@ -46,30 +46,75 @@ def square_number(x):
 square_number = lambda x: x ** 2
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # PIP & REQUESTS
 
+import requests
+
+def get_dad_joke():
+    url = "https://icanhazdadjoke.com/"
+    headers = {"Accept": "application/json" }
+
+    # try to do this
+    try:
+        response = requests.get(url, headers=headers)
+        return response.json()
+    except:
+        return { "error": "Couldn't get a dad joke" }
 
 
-
-
-
-
+# CRUD
+# create    read    update        delete 
+# POST      GET     PATCH/PUT     DELETE
 
 
 # EXAMPLE COMMAND LINE INTERFACE APP
+
+# retailer API
+# API keys - special key / passcode to use an API
+
+base_url = "https://www.fruityvice.com/api/fruit/"
+
+
+# heredoc
+"""
+# Produce Pantry #
+
+## USER STORIES ##
+- user will be able to create a pantry of their own fruit
+- user will be able to add fruit to the pantry
+- user will be able to remove fruit from the pantry
+- quick nutritional facts about a piece of fruit
+-user will be able to view the type of fruit in the pantry
+
+## API ##
+https://www.fruityvice.com/api/fruit/
+
+"""
+
+# inside current directory/folder . find the apple.py apple and take the apple_art from there
+from .apple import apple_art
+
+# this is the program itself
+class Application:
+
+    base_url = "https://www.fruityvice.com/api/fruit/"
+    running = True
+    user_name = "anonymous"
+
+    # each method will be a specific functionality within the app
+    def run(self):
+        while self.running:
+            ?????????????
+        
+    def intro_screen(self):
+        for line in apple_art:
+            print(line)
+        self.get_name()
+    
+    def get_name(self):
+        self.user_name = input("What is your name >>> ")
+
+
+# start running the application instance!
+app = Application()
+app.run()
