@@ -6,11 +6,15 @@
 **INPUT:** `"data"`, `"DATA"`, `"Data"`
 
 **OUTPUT:**
-  - `"d": 1`
-  - `"a": 2`
-  - `"t": 1`
+  { "d": 1, "a": 2, "t": 1 }
 ---
 """
 
-def character_counter():
-    pass
+# dictionary = { "name": "Chett" }
+# dictionary.get("age") # this will not error out
+
+def character_counter(string):
+    char_counter = {}
+    for char in string:
+        char_counter[char] = char_counter.get(char, 0) + 1
+    return char_counter

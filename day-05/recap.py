@@ -87,3 +87,26 @@ def search_crypto_by_price(min=0, max=float('inf')):
 # good practices, refactors, documentation
 # VS
 # the fast paced demands of the work
+
+
+# WEB SCRAPING #
+
+from bs4 import BeautifulSoup
+import requests
+
+QUOTES_URL = "https://quotes.toscrape.com/"
+# constant is a variable with a fixed value a.k.a. the value never changes
+
+
+def scrape_quotes():
+    # get the html from the website
+    response = requests.get(QUOTES_URL)
+    raw_html = response.text
+    # put it in the parser so that's it's soup
+    soup = BeautifulSoup(raw_html, 'html.parser')
+    # choose all the spans that have quotes
+    # (we know this because we looked at the html)
+    quote_spans = soup.find_all('span', class_="text")
+    # use list comprehension to get back the text in each span
+    quotes = [ span.text for span in quote_spans ] 
+    return quotes
